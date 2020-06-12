@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>items page</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery.jsの読み込み -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+    <!-- スムーズスクロール部分の記述 -->
+    <script>
+        $(function() {
+            // #で始まるアンカーをクリックした場合に処理
+            $('a[href^=#]').click(function() {
+                // スクロールの速度
+                var speed = 400; // ミリ秒
+                // アンカーの値取得
+                var href = $(this).attr("href");
+                // 移動先を取得
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                // 移動先を数値で取得
+                var position = target.offset().top;
+                // スムーススクロール
+                $('body,html').animate({
+                    scrollTop: position
+                }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <!--ここからヘッダー-->
+        <header class="header">
+            <section class="nav-box">
+                <h1 class="logo-img">
+                    <img src="../images/logo.png" width="227" height="212" alt="ロゴ">
+                </h1>
+                <nav class="gnav">
+                    <ul class="gnav-items nav-left">
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="items.html">ITEMS</a></li>
+                        <li><a href="../campaign/campaign.html">CAMPAIGN</a></li>
+                    </ul>
+                    <ul class="gnav-items nav-right">
+                        <li><a href="../news/news.html">NEWS</a></li>
+                        <li><a href="../store/store.html">STORE</a></li>
+                        <li><a href="">ONLINE<span class="block">SHOP</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <!--      ここからメイン-->
+        <main>
+            <article class="items-box">
+                <h1 class="items-title">
+                    Items
+                </h1>
+                <ul class="item-nav">
+                    <li class="item-nav-name"><a href="#coffee">コーヒー</a></li>
+                    <li class="item-nav-name"><a href="#softdrink">ソフトドリンク</a></li>
+                    <li class="item-nav-name"><a href="#cake">ケーキ</a></li>
+                    <li class="item-nav-name"><a href="#sand">サンドイッチ</a></li>
+                    <li class="item-nav-name"><a href="#madeleine">マドレーヌ</a></li>
+                    <li class="item-nav-name"><a href="#gift">ギフト</a></li>
+                </ul>
+                <section class="menu-contents">
+                    <h2 class="menu-contents-title" id="coffee">コーヒー<span class="line"></span></h2>
+                    <ul class="menu-contents-items">
+                        <li class="menu-contents-menu">
+                            <img src="images/coffee.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Original Brend<span class="sub-text">オリジナルブレンド</span></p>
+                            <p class="menu-contents-text">CAFE・ド・リシャスのオリジナルブレンドコーヒーです。ご注文に迷ったらこのコーヒーにすれば間違いなしです。</p>
+                            <p class="price">800円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/cappuccino.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Cappuccino<span class="sub-text">カプチーノ</span></p>
+                            <p class="menu-contents-text">ミルクにもこだわり、腕利きの店員が丁寧に淹れています。</p>
+                            <p class="price">700円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/cafemocha.jpg" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Cafemocha<span class="sub-text">カフェモカ</span></p>
+                            <p class="menu-contents-text">大人にも愛される甘さ控えめとなっております。</p>
+                            <p class="price">700円(税抜き)</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="menu-contents border">
+                    <h2 class="menu-contents-title" id="softdrink">ソフトドリンク<span class="line"></span></h2>
+                    <ul class="menu-contents-items">
+                        <li class="menu-contents-menu">
+                            <img src="images/orangejuice.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Orange-<span class="block">Juice</span><span class="sub-text">オレンジジュース</span></p>
+                            <p class="menu-contents-text">手押しの絞り機にて果汁を抽出しております。離れた席にも匂いをお届けします。</p>
+                            <p class="price">600円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/grapefruit-juice.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Grapefruit-Juice<span class="sub-text">グレープフルーツジュース</span></p>
+                            <p class="menu-contents-text">手押しの絞り機にて果汁を抽出しております。離れた席にも匂いをお届けします。</p>
+                            <p class="price">600円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/watermelon-juice.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Watermelon-Juice<span class="sub-text">スイカジュース</span></p>
+                            <p class="menu-contents-text">こだわりの塩と混ぜ合わせることにより、味を際立たせております。</p>
+                            <p class="price">600円(税抜き)</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="menu-contents border">
+                    <h2 class="menu-contents-title" id="cake">ケーキ<span class="line"></span></h2>
+                    <ul class="menu-contents-items">
+                        <li class="menu-contents-menu">
+                            <img src="images/cheesecake.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Cheese Cake<span class="sub-text">チーズケーキ</span></p>
+                            <p class="menu-contents-text">程よい甘さが特徴の一品です。</p>
+                            <p class="price">500円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/choco-cake.jpg" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Choco Cake<span class="sub-text">チョコケーキ</span></p>
+                            <p class="menu-contents-text">ほろ苦いテイストとなっておりますが、お子様にも楽しんでいただけます。</p>
+                            <p class="price">500円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/cake.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Choco Cake<span class="sub-text">チョコケーキ</span></p>
+                            <p class="menu-contents-text">甘めのチョコを使用しているケーキになっております。</p>
+                            <p class="price">500円(税抜き)</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="menu-contents border">
+                    <h2 class="menu-contents-title" id="sand">サンドイッチ<span class="line"></span></h2>
+                    <ul class="menu-contents-items">
+                        <li class="menu-contents-menu">
+                            <img src="images/tunasand.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Tsuna-Sand<span class="sub-text">ツナのバゲットサンド</span></p>
+                            <p class="menu-contents-text">ツナ、セロリ、りんご、くるみを
+                                アンチョビマヨネーズで和え、新鮮な
+                                水菜とチーズをサンドしました。</p>
+                            <p class="price">600円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/bltsand.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">BLT-Sand<span class="sub-text">BLTサンド</span></p>
+                            <p class="menu-contents-text">ボリュームたっぷりのBLTサンド。
+                                自家製タルタルソースはパルメザン
+                                チーズが隠し味。</p>
+                            <p class="price">600円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/yasaisand.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Salad-Sand<span class="sub-text">ビネガーソースサンド</span></p>
+                            <p class="menu-contents-text">自家製マスタードビネガーソースを使用しております。</p>
+                            <p class="price">600円(税抜き)</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="menu-contents border">
+                    <h2 class="menu-contents-title" id="madeleine">マドレーヌ<span class="line"></span></h2>
+                    <ul class="menu-contents-items">
+                        <li class="menu-contents-menu">
+                            <img src="images/madeleine_vanilla1.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Vanilla<span class="sub-text">バニラ</span></p>
+                            <p class="menu-contents-text">マドレーヌラパンの一番人気商品。
+                                マダガスカル産の最高級バニラビーンズをふんだんに使った贅沢な一品。</p>
+                            <p class="price">400円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/madeleine_greentea.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Green Tea<span class="sub-text">抹茶</span></p>
+                            <p class="menu-contents-text">宇治抹茶を贅沢につかった、香り豊かなマドレーヌ。海外の方にも人気</p>
+                            <p class="price">400円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/madeleine_doublechoco.png" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Chocolate<span class="sub-text">ダブルチョコレート</span></p>
+                            <p class="menu-contents-text">カカオが香るリッチなチョコレート生地に、
+                                チョコレートチップをトッピング</p>
+                            <p class="price">400円(税抜き)</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="menu-contents border">
+                    <h2 class="menu-contents-title" id="gift">ギフト<span class="line"></span></h2>
+                    <ul class="menu-contents-items">
+                        <li class="menu-contents-menu">
+                            <img src="images/coffee-pack.jpg" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Coffee Pack<span class="sub-text">コーヒーパック</span></p>
+                            <p class="menu-contents-text">CAFE・ド・リシャスの自慢の豆をお持ち帰りできます。</p>
+                            <p class="price">980円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/macalon.jpg" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Macalon Pack<span class="sub-text">マカロンパック</span></p>
+                            <p class="menu-contents-text">コーヒーと一緒にお楽しみいただけます。</p>
+                            <p class="price">800円(税抜き)</p>
+                        </li>
+                        <li class="menu-contents-menu">
+                            <img src="images/madeleine-pack.jpg" width="280" height="245" alt="">
+                            <p class="menu-contents-name">Madeleine Pack<span class="sub-text">マドレーヌパック</span></p>
+                            <p class="menu-contents-text">大切な方へのプレゼントにおすすめです。</p>
+                            <p class="price">1200円(税抜き)</p>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+        <!--ここからフッター-->
+        <footer class="footer">
+            <nav class="fnav">
+                <ul class="fnav-items">
+                    <li><a href="../index.html">ホーム</a></li>
+                    <li><a href="items.html">商品情報</a></li>
+                    <li><a href="../campaign/campaign.html">キャンペーン</a></li>
+                    <li><a href="../store/store.html">店舗情報</a></li>
+                    <li><a href="">オンラインショップ</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy;Copyright CAFE・ド・リシャス 2019</p>
+        </footer>
+    </div>
+
+</body></html>
